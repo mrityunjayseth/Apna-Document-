@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document Upload Site</title>
+<style>
+  /* Existing styles... */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="file"],
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* So that width includes padding */
+  }
+</style>
+</head>
+<body>
+  <!-- Existing header... -->
+
+  <div class="container">
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="file-name">File Name:</label>
+        <input type="text" id="file-name" name="file-name" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="document">Document:</label>
+        <input type="file" id="document" name="document" required>
+      </div>
+      <input type="submit" value="Upload Document">
+    </form>
+  </div>
+</body>
+</html>
